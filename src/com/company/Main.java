@@ -10,25 +10,26 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Board board = new Board();
-        String ruta;
-        board.print();
-        ruta = "A1";
-
+        String square;
         boolean gameOn = true;
+
+
+        board.print();
         while (gameOn) {
-            ruta = scan.nextLine();
-            Board.Horizontal pc = Board.Horizontal.valueOf(String.valueOf(ruta.toUpperCase().charAt(0)));
-            if (Objects.equals(pc.toString(), "exit")) {
+            square = scan.nextLine();
+            Board.Horizontal pc = Board.Horizontal.valueOf(String.valueOf(square.toUpperCase().charAt(0)));
+
+            if (square.equalsIgnoreCase("exit")) {
                 gameOn = false;
                 continue;
             }
 
-            int pi = Integer.parseInt(String.valueOf(ruta.charAt(1)));
+            int pi = Integer.parseInt(String.valueOf(square.charAt(1)));
 
-            ruta = scan.nextLine();
-            Board.Horizontal mc = Board.Horizontal.valueOf(String.valueOf(ruta.toUpperCase().charAt(0)));
+            square = scan.nextLine();
+            Board.Horizontal mc = Board.Horizontal.valueOf(String.valueOf(square.toUpperCase().charAt(0)));
 
-            int mi = Integer.parseInt(String.valueOf(ruta.charAt(1)));
+            int mi = Integer.parseInt(String.valueOf(square.charAt(1)));
 
             board.movePiece(pc, pi, mc, mi);
             board.print();
