@@ -9,9 +9,13 @@ import com.company.Piece.Color;
 
 
 import java.io.Console;
+import java.util.Scanner;
 
 
 public class Board {
+    Scanner scan = new Scanner(System.in);
+    String valLe = "";
+    String moLe="";
 
     public enum Horizontal {
         A, B, C, D, E, F, G, H
@@ -58,14 +62,16 @@ public class Board {
             }
             System.out.println(row);
         }
-
+        System.out.println();
     }
 
     public void movePiece(Horizontal pc, int pi, Horizontal mc, int mi) {
 
 
-        board[mi-1][mc.ordinal()] =  board[pi-1][pc.ordinal()];
-        board[pi-1][pc.ordinal()]=null;
+
+
+        board[mi - 1][mc.ordinal()] = board[pi - 1][pc.ordinal()];
+        board[pi - 1][pc.ordinal()] = null;
 
 
     }
