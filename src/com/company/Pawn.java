@@ -2,10 +2,11 @@ package com.company;
 
 public class Pawn extends Piece {
 
-    Pawn(){
+    Pawn() {
 
     }
-    Pawn(Color color){
+
+    Pawn(Color color) {
         super(color);
     }
 }

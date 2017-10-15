@@ -1,11 +1,12 @@
 package com.company;
 
-public class Queen extends Piece{
+public class Queen extends Piece {
 
-    Queen(){
+    Queen() {
 
     }
-    Queen(Color color){
+
+    Queen(Color color) {
         super(color);
     }
 

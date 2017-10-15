@@ -4,7 +4,8 @@ public abstract class Piece {
     public enum Color {
         BLACK, WHITE
     }
-    public enum PieceType{
+
+    public enum PieceType {
         PAWN,
         KNIGHT,
         BISHOP,
@@ -14,22 +15,23 @@ public abstract class Piece {
     }
 
     Color color = Color.WHITE;
-    PieceType type=PieceType.PAWN;
+    PieceType type = PieceType.PAWN;
 
-    int moveNum=0;
+    int moveNum = 0;
 
     boolean alive;
 
-    Piece(){
-
-    }
-    Piece(Color color){
-
-    this.color=color;
+    Piece() {
 
     }
 
-  String print(){
+    Piece(Color color) {
+
+        this.color = color;
+
+    }
+
+    String print() {
         return color.toString().substring(0, 1) + this.getClass().getSimpleName().substring(0, 1) + "|";
     }
 }

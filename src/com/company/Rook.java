@@ -5,7 +5,8 @@ public class Rook extends Piece {
     Rook() {
 
     }
-    Rook(Color color){
+
+    Rook(Color color) {
         super(color);
 
     }
