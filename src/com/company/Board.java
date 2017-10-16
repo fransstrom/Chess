@@ -13,9 +13,7 @@ import java.util.Scanner;
 
 
 public class Board {
-    Scanner scan = new Scanner(System.in);
-    String valLe = "";
-    String moLe = "";
+
 
     public enum Horizontal {
         A, B, C, D, E, F, G, H
@@ -48,10 +46,11 @@ public class Board {
 
     public void print() {
 
+        System.out.println();
         System.out.println(" |A |B |C |D |E |F |G |H |");
         for (int i = 0; i < board.length; i++) {
             String row = (i + 1) + "|";
-            for (int j = 0; j < board[i].length; j++) {
+            for (int j = 0; j < board.length; j++) {
                 if (board[i][j] == null) {
                     row += "__|";
                     continue;
@@ -62,15 +61,14 @@ public class Board {
             }
             System.out.println(row);
         }
+
         System.out.println();
     }
 
     public void movePiece(Horizontal pc, int pi, Horizontal mc, int mi) {
 
-
         board[mi - 1][mc.ordinal()] = board[pi - 1][pc.ordinal()];
         board[pi - 1][pc.ordinal()] = null;
-
 
     }
 
