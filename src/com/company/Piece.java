@@ -14,8 +14,8 @@ public abstract class Piece {
         KING
     }
 
-    Color color = Color.WHITE;
-    PieceType type = PieceType.PAWN;
+    private Color color = Color.WHITE;
+
 
     int moveNum = 0;
 

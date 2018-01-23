@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
         Board board = new Board();
         String square;
@@ -32,6 +33,7 @@ public class Main {
             int mi = Integer.parseInt(String.valueOf(square.charAt(1)));
 
             board.movePiece(pc, pi, mc, mi);
+            System.out.flush();
             board.print();
         }
 
